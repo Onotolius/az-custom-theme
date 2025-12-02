@@ -1,0 +1,396 @@
+/*
+ Theme Name: AZ Basic Theme
+ Theme URI: http://wp-test.com/
+ Author: Anatoliy Jelezoglo
+ Description: My first custom WordPress theme for practice.
+ Version: 1.0
+*/
+:root {
+  /* font-family: "Roboto", sans-serif; */
+  --primary-color: #ffffff;
+  --secondary-color: #000000;
+  --gray-color: #dddbda;
+  --light-gray-color: #f8f9fa;
+  --accent-color: #f14814;
+  --font-color: #232323;
+  --bg-color: #3f3b3d;
+  --border-radius: 5px;
+}
+.container {
+  max-width: 1300px;
+  padding: 10px;
+  margin: 0 auto;
+}
+/* ------------HEADER------------ */
+.header__inner {
+  display: flex;
+  padding: 12px 24px;
+  align-items: center;
+}
+.header__logo {
+  margin-right: auto;
+}
+.header__nav-list {
+  display: flex;
+  gap: 40px;
+}
+.header__nav-link:hover {
+  color: var(--accent-color);
+}
+.header__nav-link {
+  font-size: 14px;
+  line-height: 1.3;
+  color: var(--font-color);
+}
+.header__button {
+  margin-left: 20px;
+  margin-right: 12px;
+  padding: 14px 18px;
+  border-radius: var(--border-radius);
+  font-size: 12px;
+  border: none;
+  background-color: var(--gray-color);
+  &:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+  }
+}
+.header__actions {
+  display: flex;
+  align-items: center;
+}
+.header__actions-icons {
+  display: flex;
+  padding: 12px;
+  gap: 10px;
+  border-radius: var(--border-radius);
+  background-color: var(--ligth-gray-color);
+}
+
+/* ------------HERO------------ */
+.hero__inner {
+  margin-top: 170px;
+  display: flex;
+  align-items: flex-end;
+}
+.hero__info {
+  color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 260px 64px 64px;
+  background-color: var(--bg-color);
+}
+.hero__title {
+  font-weight: 400;
+  font-size: 33px;
+  line-height: 1.3;
+  width: 370px;
+  margin-bottom: 28px;
+}
+.hero__buttons {
+  margin-top: 0;
+  display: flex;
+  gap: 8px;
+}
+.hero__button {
+  font-size: 16px;
+  border: none;
+  border-radius: var(--border-radius);
+  color: var(--primary-color);
+  padding: 11px 26px;
+}
+.hero__button:hover {
+  cursor: pointer;
+}
+.hero__button-primary {
+  background-color: var(--accent-color);
+}
+.hero__button-ghost {
+  background-color: transparent;
+}
+/* FEATUERS */
+.features__inner {
+  padding: 64px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+.features__label {
+  color: var(--accent-color);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 133%;
+  letter-spacing: 0.08em;
+  margin-bottom: 16px;
+}
+.features__subtitle {
+  width: 700px;
+  font-size: 27px;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: var(--font-color);
+  margin-bottom: 60px;
+}
+.features__list {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+}
+.features__item {
+  display: flex;
+  gap: 13px;
+  width: 245px;
+  flex-direction: column;
+  align-items: center;
+}
+.features__item-title {
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 1.2;
+}
+.features__item-text {
+  font-size: 12px;
+  line-height: 1.3;
+}
+/* -----------PRODUCTS-------------  */
+.products__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.product__card {
+  position: relative;
+}
+.product__card-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  padding: 12px;
+  line-height: 1.3;
+  text-transform: uppercase;
+  align-items: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+.products__photos {
+  display: grid;
+  margin-top: 8px;
+  gap: 8px;
+  grid-template-columns: repeat(2, 1fr);
+}
+/* ------STORY------- */
+
+.story {
+  background-color: var(--light-gray-color);
+}
+.story__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 130px;
+}
+.story__title {
+  font-weight: 400;
+  font-size: 29px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.story__content {
+  display: flex;
+  gap: 8px;
+}
+.story__quote {
+  width: 536px;
+  height: 536px;
+  background-color: #dceae9;
+  padding: 205px 64px;
+  text-align: center;
+}
+.story__quote-text {
+  width: 408px;
+  font-size: 24px;
+  line-height: 1.3;
+  margin-bottom: 29px;
+}
+.story__quote-author {
+  font-size: 12px;
+}
+.story__brands {
+  display: flex;
+  gap: 83px;
+  margin-top: 65px;
+}
+.story__brand {
+  width: 272px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  text-align: center;
+  align-items: center;
+  font-size: 16px;
+  line-height: 1.3;
+  margin-bottom: 64px;
+}
+/* -----JOURNAL------- */
+.journal__inner {
+  display: flex;
+  padding: 64px 100px;
+  justify-content: center;
+  gap: 64px;
+}
+.journal__header {
+  bottom: 2%;
+  left: 3%;
+  position: absolute;
+  width: 476px;
+  padding: 31px 35px;
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.journal__title {
+  font-size: 12px;
+  line-height: 1.3;
+  text-transform: uppercase;
+  color: #5d6e67;
+}
+.journal__subtitle {
+  font-size: 24px;
+  line-height: 1.2;
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.journal__text {
+  font-size: 16px;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+.journal__link {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.3;
+}
+.journal__left {
+  position: relative;
+}
+.journal__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.journal__right-title {
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 108%;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.journal__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.card {
+  display: flex;
+  width: 508px;
+  gap: 30px;
+}
+.card__date {
+  font-size: 12px;
+  line-height: 1.3;
+  text-transform: uppercase;
+  color: #5d6e67;
+}
+.card__label {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+.card__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 133%;
+}
+/* --------footer-------- */
+.footer {
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+}
+.footer__inner {
+  margin-top: 64px;
+  margin-bottom: 32px;
+  padding: 0 24px;
+}
+.footer__top-title {
+  font-weight: 400;
+  font-size: 29px;
+  line-height: 110%;
+  text-transform: uppercase;
+  width: 320px;
+  margin-bottom: 32px;
+}
+.footer__gallery-list {
+  display: flex;
+  gap: 32px;
+}
+.footer__bottom {
+  margin-top: 64px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer__bottom-title {
+  width: 438px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.3;
+}
+.footer__links {
+  display: flex;
+  gap: 16px;
+}
+.footer__links-link:hover {
+  color: var(--accent-color);
+}
+.footer__links-list {
+  width: 197px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 133%;
+}
+.footer__links-label {
+  margin-bottom: 15px;
+}
+.footer__subfooter {
+  display: flex;
+  margin-top: 50px;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.3;
+}
+.footer__link-accent {
+  color: var(--accent-color);
+}
+.footer__button {
+  font-size: 16px;
+  border: none;
+  background-color: var(--accent-color);
+  border-radius: var(--border-radius);
+  color: var(--primary-color);
+  padding: 11px 26px;
+}
